@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:background="#f6f4e6"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_weight="0.2"
+        android:src="@drawable/car" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1.4"
+        android:orientation="vertical"
+        android:weightSum="6">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Mileage Calculator"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold|italic" />
+
+        <EditText
+            android:id="@+id/startOdometer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:drawableEnd="@drawable/ic_milometer"
+            android:drawableRight="@drawable/ic_milometer"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="Odometer Start Reading"
+            android:inputType="number"
+            android:maxLength="5" />
+
+        <EditText
+            android:id="@+id/endOdometer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:drawableEnd="@drawable/ic_milometer"
+            android:drawableRight="@drawable/ic_milometer"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="Odometer End REading"
+            android:inputType="number"
+            android:maxLength="5" />
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:drawableEnd="@drawable/ic_money"
+            android:drawableRight="@drawable/ic_money"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="Fuel Price per ltr"
+            android:inputType="number"
+            android:maxLength="3" />
+
+        <EditText
+            android:id="@+id/fuel"
+            android:maxLength="3"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/round"
+            android:drawableEnd="@drawable/ic_fuel"
+            android:drawableRight="@drawable/ic_fuel"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="Total Fuel" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:gravity="center_vertical"
+            android:text="CALCULATE"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30dp" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="15dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:orientation="vertical"
+        android:weightSum="4">
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Results"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/totalFuelPrice"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Total Fuel Price"
+            android:textSize="20dp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/mileage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Mileage"
+            android:textSize="20dp"
+            android:textStyle="italic|bold" />
+
+        <TextView
+            android:id="@+id/pricePerKm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="price per km"
+            android:textSize="20dp"
+            android:textStyle="italic|bold" />
+    </LinearLayout>
+
+
+</LinearLayout>
